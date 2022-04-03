@@ -1,0 +1,23 @@
+.btn-log {
+    width: 240px;
+    height: 40px;
+    background: #7209b7;
+    border: none;
+    /*margin-top: 130px;*/
+    position: relative;
+    top: 130px;
+    left: 66px;
+    font-size: 15px;
+    border-radius: 10px;
+    cursor: pointer;
+    color: #fff;
+    transition: 0.4s ease;
+  }
+  .btn-log:hover {
+    background-color: #480ca8;
+    color: #fff;
+  }
+  .btn-log a {
+    text-decoration: none;
+    color: #fff;
+  }

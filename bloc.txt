@@ -1,0 +1,18 @@
+1. Cree una página de inicio de sesión.
+2. Cree un medio para cerrar la sesión.
+3. Cree una página de registro.
+4. Agregue una opción de cambio de contraseña para los usuarios que hayan iniciado sesión.
+Como usuario final, me gustaría poder iniciar sesión con un nombre de usuario y una contraseña para poder
+proteger mi privacidad.
+
+LO QUE ME MUESTRA AL INTENTAR ENTRAR A PASSWORD CHANGE
+RESUELTO
+[03/Apr/2022 16:17:01] "GET /accounts/login/?csrfmiddlewaretoken=UzTWfpXmtTNVwYqXH4JDw9Bv0VZfHvmQxT8qUuUnV2DMfhZGttxNGQvC3Ro8DHPZ&username=prueba1&password=pruebaunoaver1986 HTTP/1.1" 200 2550
+[03/Apr/2022 16:17:15] "GET /accounts/password_change/ HTTP/1.1" 302 0
+[03/Apr/2022 16:17:15] "GET /accounts/login/?next=/accounts/password_change/ HTTP/1.1" 200 2550
+/home/salas/Code/SDGKU/newsite/accounts/urls.py changed, reloading.
+Watching for file changes with StatReloader
+Performing system checks...
+
+PARA MOSTRAR codigos ENCRIPTADAOS
+python3 -c "import secrets; print(secrets.token_urlsafe())"
