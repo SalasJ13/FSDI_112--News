@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+
+{% block title %}Update News{% endblock title %}
+
+{% block content %}
+    
+    <div class="form">
+        <form method="POST">    
+            <h1>Edit News</h1>
+            {% csrf_token %}
+            <div class="f-edit">
+                {{ form.as_p}}
+            </div>
+            <!--<button type="submit" class="btn btn-succes" value="Create">-->
+            <button type="submit" class="btn btn-succes" value="Edit">Edit</button>
+        </form>
+    </div>
+{% endblock content %}
