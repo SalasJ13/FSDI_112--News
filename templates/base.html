@@ -16,6 +16,9 @@
     <link href="{% static 'css/home.css' %}" rel="stylesheet">
     <link href="{% static 'css/base.css' %}" rel="stylesheet">
     <link href="{% static 'css/login.css' %}" rel="stylesheet">
+    <link href="{% static 'css/lists.css' %}" rel="stylesheet">
+    <link href="{% static 'css/detail.css' %}" rel="stylesheet">
+    <link href="{% static 'css/form.css' %}" rel="stylesheet">
 
 
     <title>{% block title %}{% endblock title %}</title>
@@ -29,9 +32,9 @@
                 <div class="menu">
                     <ul>
                         <li><a href="{% url 'home' %}">Home</a></li>
-                        <li><a href="#">News</a></li>
+                        <li><a href="{% url 'articles_list' %}">Articles</a></li>
                         {% if user.is_authenticated %}
-                        <li><a href="#">Create</a></li>
+                        <li><a href="{% url 'article_new' %}">Create</a></li>
                         <li><a href="{% url 'logout' %}">LogOut</a></li>
                         <li><a href="{% url 'password_change'%}">Password Change</a></li>
                         {% else %}

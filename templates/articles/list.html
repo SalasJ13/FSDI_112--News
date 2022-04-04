@@ -1,24 +1,24 @@
 {% extends 'base.html' %}
 {% load static %}
 
-{% block title %}News{% endblock title %}
+{% block title %}Articles{% endblock title %}
 
 {% block content %}
 <section>
-        <h1>News</h1>
+        <h1>Articles</h1>
         {% if user.is_authenticated %}
-        <h1>Do you want to add a new news?<a href="{% url 'article_new' %}"> Click Here!</a></h1>
+        <h1>Do you want to add a new article?<a href="{% url 'article_new' %}"> Click Here!</a></h1>
         {% else %}
-        <h1>Do you want to add a new news?<a href="{% url 'login' %}"> Login In</a></h1>
+        <h1>Do you want to add a new article??<a href="{% url 'login' %}"> Login In</a></h1>
         {% endif %}
-        {% for post in post_list %}
+        {% for article in article_list %}
     <div class="row">
         <div class="column" >
             <div class="card">
                 <div class="icon-wrapper">
                     <i class="fa-solid fa-pen"></i>
                 </div>
-                <h3 class="card-title text-dark">Title: {{ article.title }}</h3>
+                <h3>Title: {{ article.title }}</h3>
                 <p><b> Author: {{ article.author }}</b></p>
                 <p>{{article.body|truncatechars:50}}</p>
                 <p>{{ article.created_on }}</p>
